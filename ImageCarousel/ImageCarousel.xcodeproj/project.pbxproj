@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		96E03C941B076DB800498EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E03C931B076DB800498EFA /* AppDelegate.swift */; };
-		96E03C961B076DB800498EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E03C951B076DB800498EFA /* ViewController.swift */; };
-		96E03C991B076DB800498EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E03C971B076DB800498EFA /* Main.storyboard */; };
 		96E03C9B1B076DB800498EFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E03C9A1B076DB800498EFA /* Images.xcassets */; };
 		96E03C9E1B076DB800498EFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E03C9C1B076DB800498EFA /* LaunchScreen.xib */; };
 		96E03CAA1B076DB800498EFA /* ImageCarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E03CA91B076DB800498EFA /* ImageCarouselTests.swift */; };
+		96E03CB41B076E6E00498EFA /* JImageCarouselVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E03CB31B076E6E00498EFA /* JImageCarouselVC.swift */; };
+		96E03CBC1B077C8B00498EFA /* ImageCarousel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E03CBB1B077C8B00498EFA /* ImageCarousel.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		96E03C8E1B076DB800498EFA /* ImageCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E03C921B076DB800498EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E03C931B076DB800498EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96E03C951B076DB800498EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		96E03C981B076DB800498EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96E03C9A1B076DB800498EFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96E03C9D1B076DB800498EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		96E03CA31B076DB800498EFA /* ImageCarouselTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCarouselTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E03CA81B076DB800498EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E03CA91B076DB800498EFA /* ImageCarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselTests.swift; sourceTree = "<group>"; };
+		96E03CB31B076E6E00498EFA /* JImageCarouselVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JImageCarouselVC.swift; sourceTree = "<group>"; };
+		96E03CBB1B077C8B00498EFA /* ImageCarousel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCarousel.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				96E03C931B076DB800498EFA /* AppDelegate.swift */,
-				96E03C951B076DB800498EFA /* ViewController.swift */,
-				96E03C971B076DB800498EFA /* Main.storyboard */,
+				96E03CB31B076E6E00498EFA /* JImageCarouselVC.swift */,
+				96E03CBB1B077C8B00498EFA /* ImageCarousel.storyboard */,
 				96E03C9A1B076DB800498EFA /* Images.xcassets */,
 				96E03C9C1B076DB800498EFA /* LaunchScreen.xib */,
 				96E03C911B076DB800498EFA /* Supporting Files */,
@@ -192,8 +192,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E03C991B076DB800498EFA /* Main.storyboard in Resources */,
 				96E03C9E1B076DB800498EFA /* LaunchScreen.xib in Resources */,
+				96E03CBC1B077C8B00498EFA /* ImageCarousel.storyboard in Resources */,
 				96E03C9B1B076DB800498EFA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E03C961B076DB800498EFA /* ViewController.swift in Sources */,
 				96E03C941B076DB800498EFA /* AppDelegate.swift in Sources */,
+				96E03CB41B076E6E00498EFA /* JImageCarouselVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +236,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96E03C971B076DB800498EFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96E03C981B076DB800498EFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		96E03C9C1B076DB800498EFA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
