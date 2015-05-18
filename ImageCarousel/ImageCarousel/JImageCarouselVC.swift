@@ -24,8 +24,8 @@ class JImageCarouselVC: UICollectionViewController {
         return arrM
     }()
     
-    // 设置图像的索引 一开始是0
-    var curIndex = 0
+    // 设置图像的索引
+    var curIndex = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +50,8 @@ class JImageCarouselVC: UICollectionViewController {
         
         self.collectionView!.showsHorizontalScrollIndicator = false;
         
-        // 开始时就定位到第一页
-        let indexPath = NSIndexPath(forItem: 1, inSection: 0)
+        // 开始时就定位到第5页
+        let indexPath = NSIndexPath(forItem: 4, inSection: 0)
         collectionView!.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)
     }
     
@@ -65,7 +65,7 @@ class JImageCarouselVC: UICollectionViewController {
         // 尝试从指定缓存池中加载cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! JImageCarouselCell
         
-        let index = (indexPath.item - 1 + imgList.count + curIndex ) % imgList.count
+        let index = (indexPath.item - 7 + imgList.count + curIndex ) % imgList.count
         
         cell.setCell(imgList[index])
         
@@ -75,11 +75,11 @@ class JImageCarouselVC: UICollectionViewController {
     // MARK: - 实现UIScrollView滚动结束后的代理方法
     override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         
-        let offset = Int(collectionView!.contentOffset.x / collectionView!.bounds.size.width) - 1
+        let offset = Int(collectionView!.contentOffset.x / collectionView!.bounds.size.width) - 4
         
         if offset != 0 {
             curIndex = (curIndex + imgList.count + offset ) % imgList.count
-            let indexPath = NSIndexPath(forItem: 1, inSection: 0)
+            let indexPath = NSIndexPath(forItem: 4, inSection: 0)
             collectionView!.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)
             
             UIView.setAnimationsEnabled(false)
