@@ -46,9 +46,11 @@ class JImageCarouselVC: UICollectionViewController {
         layout.scrollDirection = UICollectionViewScrollDirection(rawValue:1)!
         
         // 设置分页
-        collectionView!.pagingEnabled = true;
+        collectionView?.pagingEnabled = true;
         
-        self.collectionView!.showsHorizontalScrollIndicator = false;
+        // 取消弹簧属性
+        collectionView?.bounces = false
+        collectionView?.showsHorizontalScrollIndicator = false;
         
         // 开始时就定位到第5页
         let indexPath = NSIndexPath(forItem: 4, inSection: 0)
